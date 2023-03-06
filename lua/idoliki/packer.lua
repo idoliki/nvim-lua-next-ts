@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
    use 'wbthomason/packer.nvim'
 
    -- Colors
-   use { "catppuccin/nvim", as = "catppuccin" }
+   use 'Shatur/neovim-ayu';
    use 'norcalli/nvim-colorizer.lua'
    use {
       'nvim-treesitter/nvim-treesitter',
@@ -24,6 +24,14 @@ return require('packer').startup(function(use)
       requires = { {'nvim-lua/plenary.nvim'} }
    }
    use 'nvim-telescope/telescope-file-browser.nvim'
+   use 'nvim-telescope/telescope-media-files.nvim'
+   use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+         'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+   }
 
    -- Completions
    use 'windwp/nvim-autopairs'
