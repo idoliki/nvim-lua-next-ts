@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
       requires = { {'nvim-lua/plenary.nvim'} }
    }
    use 'nvim-telescope/telescope-file-browser.nvim'
-   use 'nvim-telescope/telescope-media-files.nvim'
+   -- use 'nvim-telescope/telescope-media-files.nvim'
    use {
       'nvim-tree/nvim-tree.lua',
       requires = {
@@ -62,8 +62,8 @@ return require('packer').startup(function(use)
    }
    -- use('neovim/nvim-lspconfig')
    use('jose-elias-alvarez/null-ls.nvim')
-   use('MunifTanjim/prettier.nvim')
-   use('princejoogie/tailwind-highlight.nvim')
+   -- use('MunifTanjim/prettier.nvim')
+   -- use('princejoogie/tailwind-highlight.nvim')
    use({
       "glepnir/lspsaga.nvim",
       branch = "main",
@@ -90,8 +90,11 @@ return require('packer').startup(function(use)
    use('tpope/vim-commentary')
 
    -- Git
-   use 'github/copilot.vim'
-   use 'lewis6991/gitsigns.nvim'
-   use 'dinhhuy258/git.nvim' -- For git blame & brows
+   -- use 'github/copilot.vim'
+   -- use 'lewis6991/gitsigns.nvim'
+   -- use 'dinhhuy258/git.nvim' -- For git blame & brows
+
+   -- Markdown preview
+   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 end)

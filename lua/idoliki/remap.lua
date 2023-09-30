@@ -23,3 +23,8 @@ vim.api.nvim_set_option("clipboard","unnamed")
 -- nnoremap <leader>P "+P
 -- vnoremap <leader>p "+p
 -- vnoremap <leader>P "+P
+-- copilot
+-- vim.cmd[[imap <silent><script><expr> <C-a> copilot#Accept("\<CR>")]]
+vim.keymap.set("i", "<C-a>", "copilot#Accept()", { silent = true, expr = true })
+
+
